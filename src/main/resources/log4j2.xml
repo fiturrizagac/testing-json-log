@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss,SSS} : (%F:%L) - [%p] %C.%M() - %m%n" />
+        </Console>
+        <RollingFile name="logging-info" fileName="logging-info.log" filePattern="logging-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>%d{ISO8601} : (%F:%L) - [%p] %C.%M() - %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+        <RollingFile name="logging-error" fileName="logging-error.log" filePattern="logging-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>%d{ISO8601} : (%F:%L) - [%p] %C.%M() - %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+        <RollingFile name="logging-debug" fileName="logging-debug.log" filePattern="logging-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>%d{ISO8601} : (%F:%L) - [%p] %C.%M() - %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <!--<Logger name="org.apache.log4j.xml" level="debug" />-->
+        <!--<Logger name="org.springframework" level="warn" />-->
+        <!--<Logger name="net.sf.ehcache" level="warn" />-->
+        <!--<Logger name="org.hibernate.validator" level="error" />-->
+        <!--<Logger name="org.hibernate.persister" level="error" />-->
+        <!--<Logger name="org.hibernate.loader" level="error" />-->
+        <!--<Logger name="org.hibernate.type" level="error" />-->
+        <!--<Logger name="org.hibernate.cfg" level="error" />-->
+        <!--<Logger name="org.hibernate.boot" level="error" />-->
+        <!--<Logger name="org.hibernate.integrator" level="error" />-->
+        <!--<Logger name="org.hibernate.hql" level="error" />-->
+        <!--<Logger name="org.eclipse.jetty" level="warn" />-->
+        <!--<Logger name="springfox.documentation" level="error" />-->
+        <!--<Logger name="org.thymeleaf" level="error" />-->
+        <!--<Logger name="com.mongodb.diagnostics" level="error" />-->
+        <!--<Logger name="com.fiturriz.logging" level="debug" />-->
+        <Root level="info">
+            <AppenderRef ref="logging-info" level="info" />
+            <AppenderRef ref="logging-error" level="error" />
+            <AppenderRef ref="logging-debug" level="debug"/>
+            <AppenderRef ref="STDOUT" level="info"/>
+        </Root>
+    </Loggers>
+</Configuration>
