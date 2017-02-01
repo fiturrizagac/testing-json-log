@@ -1,9 +1,15 @@
 package com.fiturriz.logging;
 
+import static org.apache.logging.log4j.core.layout.FiturrizLogEvent.LOG_DATA;
+
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fiturriz.logging.model.Data;
+import com.fiturriz.logging.model.Event;
+import com.fiturriz.logging.model.LogData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.slf4j.Logger;
@@ -30,11 +36,11 @@ public class App {
 
     @RequestMapping("/test")
     public ResponseEntity method() throws Exception {
-        logger.error("holy shit!");
-        logger.warn("holy shit!");
-        logger.info("holy shit!");
-        logger.debug("holy shit!");
-        logger.trace("holy shit!");
+        logger.error("holy error!");
+        logger.warn("holy warn!");
+        logger.info("holy info!");
+        logger.debug("holy debug!");
+        logger.trace("holy trace!");
 
 
         loggerMDC();
@@ -46,22 +52,30 @@ public class App {
 
     protected void loggerMDC() throws Exception{
 
-
         ObjectMapper mapper = new ObjectMapper();
 
-        Map<String,Object> json  = new HashMap<>();
-        json.put("key1","valor1");
-        json.put("key2","valor2");
-        json.put("key3","valor3");
+//        Map<String,Object> json  = new HashMap<>();
+//        json.put("key1","valor1");
+//        json.put("key2","valor2");
+//        json.put("key3","valor3");
+//
+//        MDC.put("unJson",mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json));
+//
+//        Gson gson = new GsonBuilder().create();
+//
+//        MDC.put("unJson2",gson.toJson(json));
 
-        MDC.put("unJson",mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json));
+        // test
+        Event event = new Event("TRANSFER",new Date().getTime());
+        Data data = new Data(50.10, "+51123456789","+51987654321");
+        LogData logData = new LogData(event,data);
 
-        Gson gson = new GsonBuilder().create();
+        MDC.put(LOG_DATA,mapper.writeValueAsString(logData));
 
-        MDC.put("unJson2",gson.toJson(json));
 
-        logger.info("mdc PS");
+        logger.info("Testing POC layout");
         MDC.clear();
+
     }
 
 }

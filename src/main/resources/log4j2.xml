@@ -5,12 +5,12 @@
             <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss,SSS} : (%F:%L) - [%p] %C.%M() - %m%n" />
         </Console>
         <RollingFile name="logging-info" fileName="logging-info.log" filePattern="logging-%d{yyyy-MM-dd}.log">
-            <JSONLayout
+            <POCLayout
                     compact="false"
                     eventEol="false"
                     complete="false"
                     properties="true"
-                    propertiesAsList="false "
+                    propertiesAsList="false"
                     locationInfo="true" />
             <!--<PatternLayout>-->
                 <!--<pattern>%d{ISO8601} : (%F:%L) - [%p] %C.%M() - %m%n</pattern>-->
