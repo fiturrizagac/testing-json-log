@@ -1,4 +1,4 @@
-package com.fiturriz.logging.model;
+package com.fiturriz.logging.poc.log4j2.model;
 
 /**
  * Created by frankieic on 2/1/17.

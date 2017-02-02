@@ -1,17 +1,13 @@
-package com.fiturriz.logging;
+package com.fiturriz.logging.poc.log4j2;
 
-import static org.apache.logging.log4j.core.layout.FiturrizLogEvent.LOG_DATA;
+import static com.fiturriz.logging.poc.log4j2.model.FiturrizLogEvent.LOG_DATA;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fiturriz.logging.model.Data;
-import com.fiturriz.logging.model.Event;
-import com.fiturriz.logging.model.LogData;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.fiturriz.logging.poc.log4j2.model.Data;
+import com.fiturriz.logging.poc.log4j2.model.Event;
+import com.fiturriz.logging.poc.log4j2.model.LogData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;

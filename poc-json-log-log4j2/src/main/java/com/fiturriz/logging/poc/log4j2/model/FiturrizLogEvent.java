@@ -1,4 +1,4 @@
-package org.apache.logging.log4j.core.layout;
+package com.fiturriz.logging.poc.log4j2.model;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fiturriz.logging.model.LogData;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Marker;
 import org.apache.logging.log4j.ThreadContext;

@@ -6,7 +6,12 @@
 
     <groupId>com.fiturriz.logging</groupId>
     <artifactId>testing-logging</artifactId>
+    <packaging>pom</packaging>
     <version>0.1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>poc-json-log-log4j2</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>
@@ -26,37 +31,8 @@
                 <artifactId>spring-boot-starter-log4j2</artifactId>
                 <version>${com.springframework.boot.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
-
-    </dependencies>
 
     <build>
         <pluginManagement>
@@ -83,18 +59,7 @@
                     </configuration>
                 </plugin>
             </plugins>
-
         </pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-        </plugins>
     </build>
 
 
