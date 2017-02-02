@@ -11,6 +11,7 @@
 
     <modules>
         <module>poc-json-log-log4j2</module>
+        <module>poc-json-log-logabck</module>
     </modules>
 
     <properties>
