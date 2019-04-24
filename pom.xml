@@ -63,5 +63,13 @@
         </pluginManagement>
     </build>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>befitca-snapshots</id>
+            <name>Befitca Snapshot Repository</name>
+            <url>http://localhost/artifactory/befitca-development</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 
 </project>
