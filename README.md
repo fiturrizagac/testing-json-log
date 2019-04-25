@@ -86,9 +86,9 @@ mvn clean deploy -DrepositoryId=befitca-snapshots
 ...    
 </servers>
 ```
+```
 
 - Ejecutar comando, solo para deployar snaphots
 ```bash
  mvn release:prepare -B
  mvn release:perform -B
-```
