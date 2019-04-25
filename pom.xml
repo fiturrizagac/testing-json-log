@@ -5,7 +5,7 @@
     <groupId>com.fiturriz.logging</groupId>
     <artifactId>testing-logging</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.4-SNAPSHOT</version>
+    <version>0.1.5-SNAPSHOT</version>
 
     <modules>
         <module>poc-json-log-log4j2</module>
