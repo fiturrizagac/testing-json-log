@@ -10,6 +10,8 @@ mvn release:perform -B
 
 git checkout $tag_name
 
+git branch -D release
+
 mvn release:clean release:branch \
     -DbranchName=release \
     -DsuppressCommitBeforeBranch=true -DremoteTagging=false \
