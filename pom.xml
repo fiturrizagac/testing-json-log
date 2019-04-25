@@ -90,7 +90,7 @@
     <scm>
         <connection>scm:git:https://github.com/fiturrizagac/testing-json-log.git</connection>
         <url>https://github.com/fiturrizagac/testing-json-log.git</url>
-      <tag>release</tag>
+      <tag>HEAD</tag>
   </scm>
 
 
