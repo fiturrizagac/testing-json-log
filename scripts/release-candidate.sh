@@ -10,9 +10,11 @@ tag_name=$(mvn -q -Dexec.executable=echo -Dexec.args='${project.scm.tag}' --non-
 
 mvn release:perform -B
 
-git checkout .
+git reset --hard
 
 git checkout $tag_name
+
+git status
 
 git branch -D release
 
