@@ -5,7 +5,7 @@
     <groupId>com.fiturriz.logging</groupId>
     <artifactId>testing-logging</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.3-SNAPSHOT</version>
+    <version>0.1.4-SNAPSHOT</version>
 
     <modules>
         <module>poc-json-log-log4j2</module>
@@ -87,7 +87,7 @@
     <scm>
         <connection>scm:git:https://github.com/fiturrizagac/testing-json-log.git</connection>
         <url>https://github.com/fiturrizagac/testing-json-log.git</url>
-      <tag>my-branch</tag>
+      <tag>HEAD</tag>
   </scm>
 
 
