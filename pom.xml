@@ -87,7 +87,7 @@
     <scm>
         <connection>scm:git:https://github.com/fiturrizagac/testing-json-log.git</connection>
         <url>https://github.com/fiturrizagac/testing-json-log.git</url>
-      <tag>my-branch-4</tag>
+      <tag>HEAD</tag>
   </scm>
 
 
