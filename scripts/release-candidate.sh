@@ -12,6 +12,8 @@ mvn release:perform -B
 
 git reset --hard
 
+echo "my tag $tag_name"
+
 git checkout $tag_name
 
 git status
